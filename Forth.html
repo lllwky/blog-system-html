@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outside{
+           width: 100%;
+           background-image: url("images/background4.jpg");
+          
+           height: 700px;
+           
+       }
+        
+       *{
+           margin: 0;
+           padding: 0;
+       }
+       .header{
+           width: 100%;
+           height: 85px;
+           background-color: rgba(245, 244, 241, 0.2);
+       }
+       .center{
+           position: relative;
+           top: 10px;
+           left: 2%;
+           border: 1px solid;
+           border-radius: 15px;
+           border-color: rgba(245, 244, 241, 0.2);
+            box-shadow: 0 0 15px #5478f0;
+       }
+       
+       
+   
+
+       a{
+           text-decoration: none;
+           color: black;
+       }
+
+       a:hover{
+           color: aquamarine;
+           
+       }
+       .bot{
+           width: 300px;
+       }
+       
+       .bot tr{
+            width: 200px;
+            height: 60px;
+            background-color: rgb(69, 148, 240);
+            position: relative;
+            margin-top: 10px;
+            
+       }
+       .span2{
+           position: relative;
+           left: 20px;
+           
+           
+          
+       }
+       #span1{
+        position: relative;
+           left: 20px;
+       }
+       .main2{
+           width: 60%;
+           height: 800px;
+           position: relative;
+           top: 100px;
+           left: 100px;
+           /* background-color: #5478f0; */
+       }
+
+              
+       .main{
+           width: 100%;
+           height: 200px;
+       }
+       .main3{
+           
+           width: 900px;
+           height: 700px;
+           position: relative;
+           left: 580px;
+           top: -140px;
+           
+       }
+
+       #msg{
+        width: 700px;
+                   height: 240px;
+                   resize: none;
+                   border:orange solid 1px;
+
+                   position: relative;
+                   top: 10px;
+                   font-size: 20px;   
+       }
+       #msg:focus{
+             outline: none;
+             border-style:10px solid;
+             border-color: orange;
+	        
+        }
+        .table2{
+            border-collapse:collapse;
+              width: 100%;
+        }
+        .tr-css{
+            width: 100px;
+             position: relative;
+             top: -150px;
+        }
+        .td-css{
+            width: 100px;height: 60px;
+        }
+        .img-css{
+            width: 70px;height: 70px;
+        }
+        .span1-css{
+            position: relative;top: -30px;left: 20px;
+        }
+        .bot-tr{
+            position: relative;
+             top: 50px;
+        }
+        .bot-tr2{
+            position: relative;
+             top: 80px;
+        }
+        .bot-tr3{
+            position: relative;
+             top: 110px;
+        }
+       
+   </style>
+
+   
+
+</head>
+<body>
+    <div class="outside">
+        <div class="header" > <a name="four"></a>
+            <div style="height: 10px;width: 15px;position: relative; "></div>
+            <!-- <div style="position: relative; left: 40%; top: 30%;"> -->
+            <table style="position: relative;top: 100px;">
+                <th class="header-table">
+                    <tr><img src="images/pic1.png" style="width: 50px; height: 50px; position: relative; top: 17px;margin-left: 30%;" alt=""></tr>
+                    <tr><a href="First.html"  >首页</a></tr>
+                    <tr><img src="images/pic2.png" style="width: 50px; height: 50px; position: relative; top: 17px; left: 29px;" alt=""></tr>
+                    <tr><a  style="margin-left: 30px;" href="second-all.html">视频学习 </a></tr>
+                    <tr><img src="images/pic3.png" style="width: 50px; height: 50px; position: relative; top: 17px;left: 29px;" alt="" ></tr>
+                    <tr><a href="Third.html" style="margin-left: 30px;">资料下载</a> </tr>
+                    <tr><img src="images/pic4.png" style="width: 50px; height: 50px; position: relative; top: 17px; left: 29px;" alt=""></tr>
+                    <tr><a href="Forth.html" style="margin-left: 30px;color: rgb(241, 162, 14);">关于页面</a> </tr>
+                </th>
+            </table>
+              <div style="width: 400px;height: 300px;position: relative;top: 30px;left: 30px;" > 
+                <table class="bot" id="bot">
+                   <tr><td><span id="span1">人生中最重要事情是什么？</span> </td></tr>
+                   <!-- <tr class="bot-tr"><td><span id="span2">health and study</span></td></tr>
+                   <tr class="bot-tr2"><td><span id="span2">to be what you want to be.</span></td></tr>
+                   <tr class="bot-tr3"><td><span id="span2">to read and love bravely</span></td></tr> -->
+                  </table>
+              </div>
+        </div>
+              <script type="text/javascript">
+                  var bot = document.getElementById("bot");
+                  var second = 6;
+                  function showTime(){
+                      second--;
+                      if(second===5){
+                          var tr1 = document.createElement("tr");
+                           tr1.className="bot-tr";
+                           bot.appendChild(tr1);
+                           var td1 = document.createElement("td");
+                           tr1.appendChild(td1);
+                           var span1 = document.createElement("span"); 
+                           span1.className="span2";
+                           td1.appendChild(span1);
+                           span1.innerHTML="health and study.";
+                      }
+                      if(second===4){
+                          var tr2 = document.createElement("tr");
+                          tr2.className="bot-tr2";
+                          bot.appendChild(tr2);
+                          var td2 = document.createElement("td");tr2.appendChild(td2);
+                          var span2 = document.createElement("span");
+                          span2.className="span2";
+                          td2.appendChild(span2); 
+                          span2.innerHTML="to be what you want to be.";
+                      }
+                      if(second===3){
+                          var tr3 = document.createElement("tr");
+                          tr3.className="bot-tr3";
+                          bot.appendChild(tr3);
+                          var td3 = document.createElement("td"); tr3.appendChild(td3);
+                          var span3 = document.createElement("span");
+                          span3.className="span2";
+                          td3.appendChild(span3);
+                          span3.innerHTML="to read and love bravely."
+                      }
+
+                  }
+                  if(second>=0){
+                      setInterval(showTime,3000);
+                  }else{
+                    clearInterval();
+                  }
+                  
+              </script>
+
+
+
+
+
+      </div> 
+      <a href="#four"><img src="images/看书的人.png" style="width: 180px;height: 180px;position: fixed;left: 90%;top:500px;" alt=""></a>
+      <div class="main">
+          <div class="main2">
+          <table class="main-table">
+              <tr><td><span style="font-size: 60px;">about me</span><img src="images/星星.png" style="width: 50px;height: 50px;position: relative;top: -5px;" alt=""></td> </tr>
+              <tr style="position: relative;top: 20px;"><td><span style="font-family: 宋体;font-size: 20px;">笔名：sheepbotany</span> </td></tr>
+              <tr style="position: relative;top: 20px;"><td><span style="font-family: 宋体;font-size: 20px;">当然啦你也可以叫我羊角芹.</span> </td></tr>
+              <tr style="position: relative;top: 50px;"><td><span style="color: rgba(112, 148, 221, 0.911);">浙江师范大学软件工程专业</span> </td></tr>
+              <tr style="position: relative;top: 50px;"><td><span style="color: rgba(112, 148, 221, 0.911);">目前大二</span></td></tr>
+              <tr style="position: relative;top: 50px;"><td><span style="color: rgba(112, 148, 221, 0.911);">使用的语言是JAVA</span>(●ˇ∀ˇ●)</td></tr>
+              <tr style="position: relative;top: 80px;"><td>创造网站本身就很开心( •̀ ω •́ )✧</td></tr>
+              <tr style="position: relative;top: 80px;"><td>希望将来能成为厉害的全栈工程师(ง •_•)ง</td></tr>
+              <tr style="position: relative;top: 110px;"><td><H4>现在的目标是，让自己学的更更更快一点吧o(*￣▽￣*)ブ</H5>  </td></tr>
+              <tr style="position: relative;top: 110px;"><td><i>因为再不快一点，就学不完了/(ㄒoㄒ)/~~</i> </td></tr>
+            
+              <tr style="position: relative;top: 150px;"><td><span style="color: orange;font-size: 20px;">努力成为一个很厉害的人吧！</span> </td></tr>
+              <tr style="position: relative;top: 190px;"><td>我的头像：</td></tr>
+              <tr style="position: relative;top: 190px;"><td><img src="images/woman.jpg" style="width:220px;height:220px " alt=""> </td></tr>
+          </table>
+          </div>
+
+      </div>
+    
+    <div class="main3">
+        <table class="table2" id="box">
+            <tr><td><span style="font-size: 20px;">Comments</span> |0条评论</td></tr>
+            <tr><td><textarea name="" id="msg" cols="10" rows="6"></textarea><img style="width: 200px;height: 200px; position: relative;left: 490px;top: -200px;" src="images/animal-13.png" alt=""></td></tr>
+            <tr><td><input type="button" value="提交" id="btn"
+                 style="color: white; border: none; background-color: rgb(248, 207, 132); width: 70px;height: 40px;
+                 position: relative;top: -170px;left: 610px;"
+                  name="" id=""></td></tr>
+            <tr class="tr-css">
+                <td class="td-css">
+                    <img class="img-css" src="images/1.png"  alt=""><span class="span1-css">你好哦，很高兴见到你，如果你也很高兴见到我，就留下你的名字吧!</span><span>2021-12-25</span>
+
+            </tr>
+        </table>
+    </div> 
+
+   <script type="text/javascript">
+   var box = document.getElementById("box");
+   var btn = document.getElementById("btn");
+   btn.onclick=function(){ 
+       if(msg.value ===""){
+           alert("请输入内容")
+       }else{
+           var tr = document.createElement("tr");
+           box.appendChild(tr);
+           var td = document.createElement("td");
+           tr.appendChild(td)
+           var img = document.createElement("img");
+           td.appendChild(img);
+           img.src="/images/1.png";
+           var span1 = document.createElement("span");
+           td.appendChild(span1);
+           var span2 = document.createElement("span");
+           td.appendChild(span2);
+         
+           //设置css类名
+           tr.className="tr-css";
+           td.className="td-css";
+           img.className="img-css";
+           span1.className="span1-css";
+
+           //插入文本
+           span1.innerHTML=document.getElementById("msg").value;
+
+           //获取当前时间
+           now = new Date();
+           day = now.getDate();
+           month = now.getMonth();
+           year = now.getFullYear();
+           var nowtime = year+"-"+month+"-"+day;
+           span2.innerHTML=nowtime;
+              //    重置文本框
+              msg.value="";
+       }
+    }
+  
+   </script>
+</body>
+</html>
